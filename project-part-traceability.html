@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Project Deep Dive | Autonomous Subterranean Explorer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .blueprint-bg {
+            background-image: radial-gradient(circle, #1a2633 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <!-- Header Navbar -->
+    <header class="sticky top-0 z-50 w-full border-b border-zinc-800/50 bg-[#101922]/90 backdrop-blur-md">
+        <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+                </div>
+                <h1 class="text-lg font-bold tracking-tight text-white">Mechatronics<span class="text-primary">Engineer</span></h1>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-400">
+                    <a class="hover:text-white transition-colors" href="index.html">Home</a>
+                    <a class="text-white transition-colors" href="projects.html">Projects</a>
+                    <a class="hover:text-white transition-colors" href="Archivements.html">Archivements</a>
+                    <a class="hover:text-white transition-colors" href="paerpulbished.html">Publications</a>
+                    <a class="hover:text-white transition-colors" href="https://docs.google.com/forms/d/e/1FAIpQLSfEaFypvZp0enWmOyoFp835zsN4boFeUnwKt0JH1kKbx3e_9w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Contact</a>
+                </nav>
+                <a href="assets/Document/Resume/resume.pdf" target="_blank" rel="noopener noreferrer" class="flex cursor-pointer items-center justify-center rounded-lg h-9 px-5 bg-primary text-white text-sm font-bold shadow hover:brightness-110 transition-all">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="max-w-[1200px] mx-auto px-6 py-8">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 mb-6">
+            <a class="text-slate-500 dark:text-[#9dabb9] text-sm font-medium hover:text-primary" href="projects.html">Projects</a>
+            <span class="text-slate-400 dark:text-[#9dabb9] text-sm">/</span>
+            <span class="text-slate-900 dark:text-white text-sm font-medium">Automated Part Traceability</span>
+        </nav>
+
+        <!-- Hero Header Image -->
+        <section class="mb-12">
+            <div class="relative w-full h-80 md:h-[450px] overflow-hidden rounded-xl bg-slate-200 dark:bg-slate-900 shadow-2xl">
+                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105" data-alt="Automated Part Traceability System" style='background-image: linear-gradient(to top, rgba(16, 25, 34, 0.9) 0%, rgba(16, 25, 34, 0.2) 60%, rgba(16, 25, 34, 0) 100%), url("assets/images/Project%20banner/CS.png");'>
+                </div>
+                <div class="absolute bottom-0 left-0 p-8 w-full z-20">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                        <div class="max-w-2xl">
+                            <span class="inline-block px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest mb-4">Industry 4.0 / Smart Manufacturing</span>
+                            <h1 class="text-white text-4xl md:text-5xl font-bold leading-tight mb-2">Automated Part Traceability</h1>
+                            <p class="text-slate-300 text-lg max-w-xl">Industry 4.0 system integrating AI vision, ERP, and real-time shop-floor automation.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="assets/Document/Projects/CS.pdf" target="_blank" class="flex items-center justify-center gap-2 rounded-lg h-12 px-6 bg-primary text-white font-bold hover:brightness-110 transition-all shadow-lg shadow-primary/20">
+                                <span class="material-symbols-outlined">description</span>
+                                View Report
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Sidebar (Desktop Left) -->
+            <aside class="lg:col-span-3 order-2 lg:order-1">
+                <div class="sticky top-24 flex flex-col gap-8">
+                    <!-- Tech Stack -->
+                    <div class="bg-background-light dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 p-6 rounded-xl">
+                        <h3 class="text-slate-800 dark:text-white text-sm font-bold uppercase tracking-widest mb-6 border-b border-slate-200 dark:border-slate-800 pb-2">Tech Stack</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary">memory</span>
+                                <span class="text-xs font-medium dark:text-slate-300 text-slate-700 text-center">Raspberry Pi</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary">visibility</span>
+                                <span class="text-xs font-medium dark:text-slate-300 text-slate-700 text-center">YOLOv8 AI</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary">terminal</span>
+                                <span class="text-xs font-medium dark:text-slate-300 text-slate-700 text-center">Python</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary">cloud_sync</span>
+                                <span class="text-xs font-medium dark:text-slate-300 text-slate-700 text-center">ERP System</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary">qr_code</span>
+                                <span class="text-xs font-medium dark:text-slate-300 text-slate-700 text-center">Barcode<br>Printing</span>
+                            </div>
+                            <div class="flex flex-col items-center justify-center gap-2 p-3 rounded-lg bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                                <span class="material-symbols-outlined text-primary">conveyor_belt</span>
+                                <span class="text-xs font-medium dark:text-slate-300 text-slate-700 text-center">Stepper<br>Motor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Metadata -->
+                    <div class="p-4 flex flex-col gap-4">
+                        <div class="flex justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                            <span class="text-slate-500 text-sm">Duration</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">6 Months</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                            <span class="text-slate-500 text-sm">Role</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200 text-right">Lead AI & Mechatronics</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+                            <span class="text-slate-500 text-sm">Domain</span>
+                            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200 text-right">Industry 4.0</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="lg:col-span-9 order-1 lg:order-2">
+                <!-- Section: Introduction/Description -->
+                <section class="mb-12">
+                    <p class="text-xl text-slate-900 dark:text-white leading-relaxed font-light mb-4">
+                        This project presents an <strong class="font-medium text-primary">Automated Part Traceability & Data Synchronization (APTDS)</strong> system designed for modern manufacturing environments. The system integrates:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 mb-6 text-slate-600 dark:text-slate-400 font-medium">
+                        <li>AI-based vision for part identification</li>
+                        <li>Mechanical conveyor and actuation system</li>
+                        <li>ERP-based data synchronization</li>
+                    </ul>
+                    <p class="text-lg text-emerald-600 dark:text-emerald-400 font-medium bg-emerald-50 dark:bg-emerald-500/10 p-4 rounded-lg border border-emerald-500/20">
+                        👉 It combines CAD design, mechanical system integration, and AI-based automation to improve manufacturing accuracy and workflow efficiency.
+                    </p>
+                </section>
+
+                <!-- Section: The Challenge -->
+                <section class="mb-12">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary">warning</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Problem Statement</h2>
+                    </div>
+                    <div class="prose prose-invert max-w-none text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <p class="mb-4">Manufacturing industries face significant challenges such as:</p>
+                        <ul class="list-disc list-outside ml-6 mb-6 mt-2 space-y-2 text-slate-300 font-medium tracking-wide">
+                            <li><span class="text-primary">Errors</span> in manual labeling.</li>
+                            <li><span class="text-primary">Poor traceability</span> of components.</li>
+                            <li><span class="text-primary">Lack of real-time</span> synchronization.</li>
+                            <li><span class="text-primary">Inefficient workflow</span> between stations.</li>
+                        </ul>
+                        <div class="mb-6 bg-zinc-800/40 p-4 rounded-xl border border-zinc-700/50">
+                            <span class="text-slate-300 block mb-3 font-medium">👉 Additionally, these environments typically suffer from:</span>
+                            <ul class="list-none space-y-2">
+                                <li class="text-red-400 flex items-center gap-2"><span class="material-symbols-outlined text-sm">close</span> No proper mechanical validation system</li>
+                                <li class="text-red-400 flex items-center gap-2"><span class="material-symbols-outlined text-sm">close</span> No automated inspection + sorting mechanism</li>
+                            </ul>
+                        </div>
+                        <div class="bg-primary/10 border-l-4 border-primary p-4 rounded-r-lg">
+                            <p class="text-white font-medium m-0 flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">arrow_forward</span>
+                                <span class="text-slate-300 text-lg">📌 <strong>Core task:</strong> The problem requires developing both mechanical system design + intelligent automation.</span>
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Objectives & Methodology -->
+                <section class="mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary">track_changes</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Objective</h2>
+                    </div>
+                    <div class="bg-zinc-800/40 p-6 rounded-xl border border-zinc-700/50 mb-8">
+                        <ul class="space-y-4 text-slate-300">
+                            <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-emerald-400 shrink-0">check_circle</span> <span>To design a mechanical conveyor-based inspection system</span></li>
+                            <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-emerald-400 shrink-0">check_circle</span> <span>To implement AI-based part detection using vision</span></li>
+                            <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-emerald-400 shrink-0">check_circle</span> <span>To develop automated labeling using ERP data</span></li>
+                            <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-emerald-400 shrink-0">check_circle</span> <span>To synchronize data in real time</span></li>
+                            <li class="flex gap-3 items-center"><span class="material-symbols-outlined text-emerald-400 shrink-0">check_circle</span> <span>To ensure only validated parts proceed physically and digitally</span></li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section: Methodology & Architecture -->
+                <section class="mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary">account_tree</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Methodology & Architecture</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8 text-sm">
+                        <!-- Mechanical -->
+                        <div class="bg-zinc-800/40 p-5 rounded-xl border border-zinc-700/50 hover:border-primary/50 transition-colors">
+                            <h4 class="text-white font-bold mb-4 flex items-center gap-2 border-b border-zinc-700 pb-2"><span class="material-symbols-outlined text-primary">conveyor_belt</span> Mechanical Flow</h4>
+                            <ul class="space-y-3 text-slate-400">
+                                <li>• Design conveyor system (CAD)</li>
+                                <li>• Frame design for vision stability</li>
+                                <li>• Integrate stepper motor & driver</li>
+                                <li>• Ensure controlled part movement</li>
+                            </ul>
+                        </div>
+                        <!-- AI/Software -->
+                        <div class="bg-zinc-800/40 p-5 rounded-xl border border-zinc-700/50 hover:border-primary/50 transition-colors">
+                            <h4 class="text-white font-bold mb-4 flex items-center gap-2 border-b border-zinc-700 pb-2"><span class="material-symbols-outlined text-primary">visibility</span> AI & Software Flow</h4>
+                            <ul class="space-y-3 text-slate-400">
+                                <li>• Capture image using camera</li>
+                                <li>• Detect nuts, bolts, washers (YOLO)</li>
+                                <li>• Validate components</li>
+                                <li>• Handle logic on Raspberry Pi</li>
+                            </ul>
+                        </div>
+                        <!-- Integration -->
+                        <div class="bg-zinc-800/40 p-5 rounded-xl border border-zinc-700/50 hover:border-primary/50 transition-colors">
+                            <h4 class="text-white font-bold mb-4 flex items-center gap-2 border-b border-zinc-700 pb-2"><span class="material-symbols-outlined text-primary">hub</span> Integration Flow</h4>
+                            <ul class="space-y-3 text-slate-400">
+                                <li>• Trigger actuation on validation</li>
+                                <li>• Generate barcode label</li>
+                                <li>• Sync data with ERP system</li>
+                                <li>• Output OLED & LED indicators</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Working Principle -->
+                <section class="mb-12">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="material-symbols-outlined text-primary">settings_suggest</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Working Principle</h2>
+                    </div>
+                    <div class="bg-zinc-900/50 rounded-xl border border-zinc-700/50 p-6 shadow-lg">
+                        <ol class="relative border-l border-zinc-700 ml-3 space-y-6">
+                            <li class="pl-6">
+                                <span class="absolute w-3 h-3 bg-primary rounded-full -left-1.5 top-1.5 border border-zinc-900"></span>
+                                <p class="text-slate-300 font-medium">Part moves on conveyor (mechanical system)</p>
+                            </li>
+                            <li class="pl-6">
+                                <span class="absolute w-3 h-3 bg-primary rounded-full -left-1.5 top-1.5 border border-zinc-900"></span>
+                                <p class="text-slate-300 font-medium">Camera captures image (positioned via CAD design)</p>
+                            </li>
+                            <li class="pl-6">
+                                <span class="absolute w-3 h-3 bg-primary rounded-full -left-1.5 top-1.5 border border-zinc-900"></span>
+                                <p class="text-slate-300 font-medium">AI model detects part type & system validates part</p>
+                            </li>
+                            <li class="pl-6">
+                                <span class="absolute w-3 h-3 bg-primary rounded-full -left-1.5 top-1.5 border border-zinc-900"></span>
+                                <p class="text-slate-300 font-medium">If valid → conveyor moves forward + label printed<br><span class="text-red-400 text-sm">If invalid → system stops / rejects part</span></p>
+                            </li>
+                            <li class="pl-6">
+                                <span class="absolute w-3 h-3 bg-primary rounded-full -left-1.5 top-1.5 border border-zinc-900"></span>
+                                <p class="text-slate-300 font-medium">Data is synchronized with ERP system</p>
+                            </li>
+                        </ol>
+                        <div class="mt-8 p-3 bg-primary/10 border border-primary/20 rounded-lg text-primary text-center font-medium shadow-sm">
+                            👉 This highlights the tight coupling between mechanical motion and AI decision-making.
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Results -->
+                <section class="mb-12">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary">analytics</span>
+                        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Results & Observations</h2>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start gap-3 p-4 bg-zinc-800/40 rounded-xl border border-zinc-700/50">
+                            <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Accurate Detection</h4>
+                                <p class="text-xs text-slate-400 mt-1">Reliable part detection using YOLO AI.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-zinc-800/40 rounded-xl border border-zinc-700/50">
+                            <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Mechanical Reliability</h4>
+                                <p class="text-xs text-slate-400 mt-1">Smooth CAD-designed conveyor operation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-zinc-800/40 rounded-xl border border-zinc-700/50">
+                            <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Error Reduction</h4>
+                                <p class="text-xs text-slate-400 mt-1">Significant reduction in manual labeling errors.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 p-4 bg-zinc-800/40 rounded-xl border border-zinc-700/50">
+                            <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                            <div>
+                                <h4 class="text-white font-bold text-sm">Workflow Sync</h4>
+                                <p class="text-xs text-slate-400 mt-1">Proper synchronization between motion, detection, and ERP.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-500/10 border-l-4 border-emerald-500 p-4 rounded-r-lg shadow-sm">
+                        <p class="text-emerald-400 m-0 font-medium">👉 Shows successful integration of mechanical systems, AI systems, and industrial workflows.</p>
+                    </div>
+                </section>
+
+                <!-- Key Takeaway / Conclusion -->
+                <section class="border-t border-slate-200 dark:border-slate-800 pt-10 mb-20 text-center">
+                   <h3 class="text-2xl font-display font-bold text-white mb-6 tracking-tight">Conclusion</h3>
+                   <p class="text-zinc-400 max-w-3xl mx-auto mb-8 text-lg leading-relaxed">
+                       The project successfully demonstrates a balanced mechatronics system combining <strong class="text-slate-200">mechanical design</strong> (CAD + conveyor), <strong class="text-slate-200">AI-based vision</strong> (YOLO detection), <strong class="text-slate-200">embedded control</strong> (Raspberry Pi + motor control), and <strong class="text-slate-200">ERP integration</strong>.
+                   </p>
+                   <div class="inline-block px-8 py-4 bg-primary/10 text-primary border border-primary/30 rounded-full font-bold shadow-lg shadow-primary/5">
+                       👉 Provides a complete Industry 4.0 solution for automated inspection and traceability.
+                   </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-200 dark:border-zinc-800 py-12 bg-zinc-50 dark:bg-zinc-900/50">
+        <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col gap-4 text-center md:text-left">
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <div class="bg-zinc-800 p-1.5 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-sm">precision_manufacturing</span>
+                    </div>
+                    <h2 class="text-lg font-bold tracking-tight">Mechatronics Engineer</h2>
+                </div>
+                <p class="text-zinc-500 text-sm max-w-xs">Building the next generation of autonomous and connected mechatronic systems.</p>
+            </div>
+            
+            <div class="flex gap-8">
+                <a class="text-zinc-500 hover:text-primary transition-colors flex items-center gap-2" href="https://www.linkedin.com/in/thirisharajarajan" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                <a class="text-zinc-500 hover:text-primary transition-colors flex items-center gap-2" href="https://github.com/thirisha2138" target="_blank">
+                    <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <span>GitHub</span>
+                </a>
+                <a class="text-zinc-500 hover:text-primary transition-colors flex items-center gap-2" href="https://docs.google.com/forms/d/e/1FAIpQLSfEaFypvZp0enWmOyoFp835zsN4boFeUnwKt0JH1kKbx3e_9w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                    <span class="material-symbols-outlined">mail</span>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="text-zinc-500 text-xs font-medium">
+                © 2024 Thirisha Rajarajan. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

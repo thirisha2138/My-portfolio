@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio Projects Gallery | Mechatronics Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .circuit-pattern {
+            background-image: radial-gradient(circle at 2px 2px, #283039 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+    <!-- Header Navbar -->
+    <header class="sticky top-0 z-50 w-full border-b border-zinc-800/50 bg-[#101922]/90 backdrop-blur-md">
+        <div class="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-primary flex items-center justify-center">
+                    <span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+                </div>
+                <h1 class="text-lg font-bold tracking-tight text-white">Mechatronics<span
+                        class="text-primary">Engineer</span></h1>
+            </div>
+
+            <div class="flex items-center gap-8">
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-zinc-400">
+                    <a class="hover:text-white transition-colors" href="index.html">Home</a>
+                    <a class="text-white transition-colors" href="projects.html">Projects</a>
+                    <a class="hover:text-white transition-colors" href="Archivements.html">Archivements</a>
+                    <a class="hover:text-white transition-colors" href="paerpulbished.html">Publications</a>
+                    <a class="hover:text-white transition-colors" href="https://docs.google.com/forms/d/e/1FAIpQLSfEaFypvZp0enWmOyoFp835zsN4boFeUnwKt0JH1kKbx3e_9w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Contact</a>
+                </nav>
+                <a href="assets/Document/Resume/resume.pdf" target="_blank" rel="noopener noreferrer"
+                    class="flex cursor-pointer items-center justify-center rounded-lg h-9 px-5 bg-primary text-white text-sm font-bold shadow hover:brightness-110 transition-all">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 min-h-screen">
+        <!-- Hero Section -->
+        <section class="mb-16">
+            <div
+                class="relative rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 p-8 md:p-16 flex flex-col items-center text-center">
+                <!-- Abstract Technical Pattern Background -->
+                <div class="absolute inset-0 opacity-20 pointer-events-none bg-gradient-to-br from-primary/30 to-transparent"
+                    data-alt="Technical blueprint grid pattern background"
+                    style="background-image: radial-gradient(circle at 2px 2px, #137fec 1px, transparent 0); background-size: 32px 32px;">
+                </div>
+
+                <div class="relative z-10 space-y-6 max-w-3xl">
+                    <h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tighter">
+                        Bridging hardware and software through <span class="text-primary">intelligent systems.</span>
+                    </h2>
+                    <p class="text-zinc-400 text-lg md:text-xl font-normal">
+                        Mechatronics Engineer specializing in ROS2, IoT Architectures, High-Performance Drones, and VR
+                        Industrial Simulations.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4 pt-4">
+
+                        <a href="https://github.com/thirisha2138" target="_blank" rel="noopener noreferrer"
+                            class="bg-zinc-800 text-white px-8 py-3 rounded-xl font-bold flex items-center gap-2 hover:bg-zinc-700 transition-colors">
+                            <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            Explore GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Technical Projects</h3>
+                    <p class="text-zinc-500">Documented engineering projects from simulation to hardware implementation.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Project 1: 3D Prints -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/3D%20printing%20.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        3D Prints & CAD</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Designed and 3D
+                                        printed custom components using CAD software. Optimized designs for fit,
+                                        flexibility, and functional performance in mechanical assemblies.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">design_services</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg uppercase">CAD</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">3D
+                                    Printing</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-3d-prints.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                CAD Files <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Auto Irrigation System -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/Automatic%20watering%20system.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Auto Irrigation System</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Developed an automated
+                                        irrigation system using a soil moisture sensor for detection, a microcontroller
+                                        for control logic, and a relay module to regulate the water pump efficiently.
+                                    </p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">grass</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Sensors</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Automation</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-irrigation.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Architecture <span class="material-symbols-outlined text-sm">memory</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: Automated Part Traceability & Data Synchronization -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/CS.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Automated Part Traceability</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Data Synchronization
+                                        and part tracking system. Ensured end-to-end component visibility across the
+                                        manufacturing lifecycle.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">hub</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg uppercase">Data
+                                    Sync</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Automation</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-part-traceability.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4: Automated Tank Water Level Control System -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <img src="assets/Video/Thumbnail/water%20level.png" alt="Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Automated Tank Level Control</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Built an Arduino-based
+                                        system using ultrasonic sensing to monitor water levels and automatically
+                                        control a pump, with real-time LCD display.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">settings_system_daydream</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg uppercase">Arduino</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Ultrasonic</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-tank-level.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">Code
+                                & Details <span class="material-symbols-outlined text-sm">code</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5: Cognitive Socially Assistive Robot -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <img src="assets/images/Project%20banner/CAR.png" alt="Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Cognitive Assistive Robot</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">A Socially Assistive
+                                        Robot for Multimodal Assessment and Adaptive Support in Autism Therapy.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">psychology</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg uppercase">Robotics</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">AI
+                                    Therapy</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-cognitive-robot.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Details <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6: Line follower without a Microcontroller -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <img src="assets/Video/Thumbnail/linefollow%20.jpg" alt="Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Line Follower (No Microcontroller)</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Built a simple line
+                                        follower robot using IR sensors to detect and follow a predefined path. Designed
+                                        the system without a microcontroller by using basic electronic components for
+                                        decision-making logic.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">route</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Logic
+                                    Circuits</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">IR
+                                    Sensors</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-line-follower.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Schematic <span class="material-symbols-outlined text-sm">account_tree</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 7: Path Planning Algorithm For Autonomous UAV -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <img src="assets/Video/Thumbnail/Path%20planning%20.png" alt="Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Path Planning Algorithm For UAV</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Analysed A* and RRT
+                                        path-planning algorithms for autonomous drone navigation, evaluating path
+                                        efficiency, complexity, and obstacle handling in dynamic 3D environments.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">explore</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg uppercase">Algorithms</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">A*
+                                    / RRT</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-path-planning.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Source <span class="material-symbols-outlined text-sm">code</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 8: Personal Assistive Robot -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/Personal%20assistive%20robot.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Personal Assistive Robot</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Designed a personal
+                                        assistive robot capable of voice-controlled interactions to perform basic tasks.
+                                        Integrated speech recognition and motor control for responsive, user-friendly
+                                        assistance.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">psychology</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Microcontroller</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Speech
+                                    Recognition</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-assistive-robot.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Project <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 9: Smart Airport Baggage Transport System -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <img src="assets/Video/Thumbnail/Airport%20system.png" alt="Thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Smart Airport Baggage System</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Designed a smart
+                                        baggage transport system for airports to assist travelers by automating luggage
+                                        transfer. Enhanced user experience with secure tracking and queue management.
+                                    </p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">airport_shuttle</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Systems
+                                    Integrations</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">App
+                                    Tracking</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-baggage.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">View
+                                Model <span class="material-symbols-outlined text-sm">precision_manufacturing</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 10: Unmanned Aerial Vehicle -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/drone.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Unmanned Aerial Vehicle</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Optimized wireless
+                                        control systems for Quadcopter UAVs, enhancing reliability, flight performance,
+                                        and integrating the CC3D microcontroller for improved navigation and safety.</p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">flight</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Wireless
+                                    Control</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">CC3D</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-uav.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">Flight
+                                Data <span class="material-symbols-outlined text-sm">monitoring</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 11: Unmanned Railway Gate System WITHOUT Microcontroller -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/URGS.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        Unmanned Railway Gate System</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Developed an automated
+                                        railway gate control system using an IR sensor for train detection, a 555 timer
+                                        IC with a capacitor for PWM generation, and a servo motor for gate operation.
+                                    </p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">sensors</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">555
+                                    Timer</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">PWM</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-railway-gate.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">System
+                                Design <span class="material-symbols-outlined text-sm">hardware</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 12: VR-Augmented Teleoperated Robot For Surgeries -->
+                <div
+                    class="group bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl overflow-hidden hover:border-primary/50 transition-all shadow-lg">
+                    <div class="aspect-video relative overflow-hidden bg-zinc-800">
+                        <video src="assets/Video/Thumbnail/VR.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+                    </div>
+                    <div class="p-8 flex flex-col h-[calc(100%-56.25%)] justify-between">
+                        <div>
+                            <div class="flex items-start justify-between mb-4">
+                                <div>
+                                    <h4
+                                        class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                        VR Teleoperated Robot For Surgeries</h4>
+                                    <p class="text-zinc-500 dark:text-zinc-400 mt-2 line-clamp-3">Developed a VR-based
+                                        surgical training system using Unity, C#, and Oculus Rift, providing an
+                                        immersive and risk-free environment for skill refinement and medical education.
+                                    </p>
+                                </div>
+                                <span class="material-symbols-outlined text-primary">view_in_ar</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2 mb-6 mt-4">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 border border-primary/20 text-primary text-xs font-bold rounded-lg uppercase">Unity</span>
+                                <span
+                                    class="px-3 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold rounded-lg uppercase">Oculus
+                                    Rift</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <a href="project-vr-teleoperated.html"
+                                class="flex-1 bg-primary text-white py-2 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:brightness-110 transition-colors">Explore
+                                Simulator <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Footer -->
+        <footer class="border-t border-zinc-200 dark:border-zinc-800 py-12 bg-zinc-50 dark:bg-zinc-900/50">
+            <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex flex-col gap-4 text-center md:text-left">
+                    <div class="flex items-center gap-3 justify-center md:justify-start">
+                        <div class="bg-zinc-800 p-1.5 rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined text-white text-sm">precision_manufacturing</span>
+                        </div>
+                        <h2 class="text-lg font-bold tracking-tight">Mechatronics Engineer</h2>
+                    </div>
+                    <p class="text-zinc-500 text-sm max-w-xs">Building the next generation of autonomous and connected
+                        mechatronic systems.</p>
+                </div>
+
+                <div class="flex gap-8">
+                    <a class="text-zinc-500 hover:text-primary transition-colors flex items-center gap-2" href="https://www.linkedin.com/in/thirisharajarajan" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a class="text-zinc-500 hover:text-primary transition-colors flex items-center gap-2" href="https://github.com/thirisha2138" target="_blank">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5 fill-current"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a class="text-zinc-500 hover:text-primary transition-colors flex items-center gap-2"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfEaFypvZp0enWmOyoFp835zsN4boFeUnwKt0JH1kKbx3e_9w/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">
+                        <span class="material-symbols-outlined">mail</span>
+                        <span>Contact</span>
+                    </a>
+                </div>
+
+                <div class="text-zinc-500 text-xs font-medium">
+                    © 2024 Thirisha Rajarajan. All rights reserved.
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+</body>
+
+</html>
